@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'incidencias/CSS/listar_incidencias.css' %}">
+    <title>Listado de Incidencias</title>
+</head>
+<body>
+    <h1>Listado de Incidencias</h1>
+    <!-- Listado de incidencias en una tabla -->
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Prioridad</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for incidencia in incidencias %}
+                <tr>
+                    <td>{{ incidencia.titulo }}</td>
+                    <td>{{ incidencia.descripcion }}</td>
+                    <td>{{ incidencia.categoria }}</td>
+                    <td>{{ incidencia.prioridad }}</td>
+                    <td>{{ incidencia.estado }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

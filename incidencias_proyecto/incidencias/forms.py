@@ -22,3 +22,14 @@ class IncidenciaForm(forms.ModelForm):
             'categoria': forms.Select(),
             'prioridad': forms.Select()
         }
+
+
+# Formulario para editar únicamente el estado y la prioridad de una incidencia
+class IncidenciaEstadoForm(forms.ModelForm):
+    class Meta:
+        model = Incidencia
+        fields = ['estado', 'prioridad']
+        widgets = {
+            'estado': forms.Select()
+        } 
+
