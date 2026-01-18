@@ -1,16 +1,94 @@
- body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            background-color: #f4f6f9;
-            margin: 0;
-            padding: 30px;
-            color: #333;
-        }
+/* ===== RESET ===== */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
 
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #2c3e50;
-        }
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: #34495e;
+    color: #ffffff;
+    padding: 20px 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+/* ===== NAV ===== */
+nav {
+    background-color: #2c3e50;
+    display: flex;
+    justify-content: center
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    padding: 14px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #1f2d3a;
+}
+
+/* ===== MAIN ===== */
+main {
+    flex: 1;
+    padding: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+main h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* ===== SECCIONES ===== */
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #34495e;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.85rem;
+}
 
         .table-container {
             max-width: 1100px;
@@ -49,7 +127,7 @@
         }
 
         tbody tr:hover {
-            background-color: #f2f7ff;
+            background-color: #dbe9ff;
         }
 
         tbody tr:last-child {

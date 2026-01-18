@@ -8,11 +8,27 @@
     <title>Crear Incidencia</title>
 </head>
 <body>
+    <header>
+        <h1>Sistema de Gestión de Incidencias</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'listar_incidencias' %}">Ver Incidencias</a></li>
+                <li><a href="{% url 'crear_incidencia' %}">Crear Incidencia</a></li>
+                <li><a href="{% url 'pedir_id_incidencia' %}">Editar Incidencia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
     <h1>Crear Incidencia</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Crear</button>
     </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestión de Incidencias</p>
+    </footer>
 </body>
 </html>

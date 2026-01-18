@@ -4,7 +4,6 @@
     font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 
-
 /* ===== BODY ===== */
 body {
     margin: 0;
@@ -34,7 +33,6 @@ nav {
     display: flex;
     justify-content: center
 }
-
 
 nav ul {
     list-style: none;
@@ -88,86 +86,4 @@ footer {
     text-align: center;
     padding: 15px;
     font-size: 0.85rem;
-}
-
-/* ===== TÍTULO ===== */
-main h1 {
-    text-align: center;
-    margin-bottom: 25px;
-    color: #2c3e50;
-}
-
-/* ===== FORMULARIO ===== */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* ===== CAMPOS ===== */
-form p {
-    margin-bottom: 16px;
-}
-
-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-    color: #34495e;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    background-color: #f9f9f9;
-}
-
-textarea {
-    resize: vertical;
-    min-height: 90px;
-}
-
-/* ===== FOCO ===== */
-input:focus,
-select:focus,
-textarea:focus {
-    outline: none;
-    border-color: #2980b9;
-    background-color: #ffffff;
-}
-
-/* ===== BOTÓN ===== */
-button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    background-color: #2980b9;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #2471a3;
-}
-
-/* ===== ERRORES DE DJANGO ===== */
-.errorlist {
-    color: #e74c3c;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-    padding-left: 0;
-    list-style: none;
 }

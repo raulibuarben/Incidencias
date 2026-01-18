@@ -1,11 +1,11 @@
-{% load static %}
+{% load static%}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'incidencias/CSS/editar_incidencia.css' %}">
-    <title>Editar Incidencia</title>
+    <title>Pedir título de Incidencia - Sistema de Gestión de Incidencias</title>
+    <link rel="stylesheet" href="{% static 'incidencias/CSS/pedir_id_incidencia.css' %}">
 </head>
 <body>
     <header>
@@ -20,14 +20,12 @@
         </nav>
     </header>
     <main>
-        <h1>Editar Incidencia</h1>
-        <h2>{{ incidencia.titulo }}</h2>
+        <h2>Introduzca el título de la Incidencia a Editar</h2>
         <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-            <button type="submit">Guardar cambios</button>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
         </form>
-        <button onclick="location.href='{% url 'listar_incidencias' %}'">Cancelar</button>
     </main>
     <footer>
         <p>&copy; 2024 Sistema de Gestión de Incidencias</p>

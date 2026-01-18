@@ -1,3 +1,4 @@
+
 /* ===== RESET ===== */
 * {
     box-sizing: border-box;
@@ -91,7 +92,7 @@ footer {
 }
 
 /* ===== TÍTULO ===== */
-main h1 {
+ h2 {
     text-align: center;
     margin-bottom: 25px;
     color: #2c3e50;

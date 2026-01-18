@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from .forms import IncidenciaForm, IncidenciaEstadoForm
+from .forms import IncidenciaForm, IncidenciaEstadoForm, MiFormulario
 from .models import Incidencia
 
 # Create your views here.
@@ -33,3 +33,19 @@ def editar_incidencia(request, incidencia_id):
     else:
         form = IncidenciaEstadoForm(instance=incidencia)
     return render(request, 'incidencias/editar_incidencia.html', {'form': form, 'incidencia': incidencia})
+
+
+#Vista para la página de inicio
+def inicio(request):
+    return render(request, 'incidencias/inicio.html')   
+
+#Vista para pedir el id de la incidencia a editar
+def pedir_id_incidencia(request):
+    if request.method == 'POST':
+        form = MiFormulario(request.POST)
+        if form.is_valid():
+            incidencia_id = form.cleaned_data['titulo'].id
+            return redirect('editar_incidencia', incidencia_id=incidencia_id)
+    else:
+        form = MiFormulario()
+    return render(request, 'incidencias/pedir_id_incidencia.html', {'form': form})

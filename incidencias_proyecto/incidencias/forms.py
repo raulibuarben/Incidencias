@@ -2,6 +2,7 @@
 from django import forms
 from .models import Incidencia, Categoria
 
+
 # Formulario para crear una categoría
 class CategoriaForm(forms.ModelForm):
     class Meta:
@@ -32,4 +33,18 @@ class IncidenciaEstadoForm(forms.ModelForm):
         widgets = {
             'estado': forms.Select()
         } 
+#Formulario que pida el titulo de la incidencia para editarla
+from django import forms
+from .models import Incidencia
 
+class MiFormulario(forms.ModelForm):
+    # Definimos el campo como una elección de modelos
+    titulo = forms.ModelChoiceField(
+        queryset=Incidencia.objects.all(),
+        empty_label="Selecciona una incidencia para editar",
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
+
+    class Meta:
+        model = Incidencia
+        fields = ['titulo'] 

@@ -8,29 +8,45 @@
     <title>Listado de Incidencias</title>
 </head>
 <body>
-    <h1>Listado de Incidencias</h1>
-    <!-- Listado de incidencias en una tabla -->
-    <table>
-        <thead>
-            <tr>
-                <th>Título</th>
-                <th>Descripción</th>
-                <th>Categoría</th>
-                <th>Prioridad</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for incidencia in incidencias %}
+    <header>
+        <h1>Sistema de Gestión de Incidencias</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'listar_incidencias' %}">Ver Incidencias</a></li>
+                <li><a href="{% url 'crear_incidencia' %}">Crear Incidencia</a></li>
+                <li><a href="{% url 'pedir_id_incidencia' %}">Editar Incidencia</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Listado de Incidencias</h1>
+        <!-- Listado de incidencias en una tabla -->
+        <table>
+            <thead>
                 <tr>
-                    <td>{{ incidencia.titulo }}</td>
-                    <td>{{ incidencia.descripcion }}</td>
-                    <td>{{ incidencia.categoria }}</td>
-                    <td>{{ incidencia.prioridad }}</td>
-                    <td>{{ incidencia.estado }}</td>
+                    <th>Título</th>
+                    <th>Descripción</th>
+                    <th>Categoría</th>
+                    <th>Prioridad</th>
+                    <th>Estado</th>
                 </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                {% for incidencia in incidencias %}
+                    <tr>
+                        <td>{{ incidencia.titulo }}</td>
+                        <td>{{ incidencia.descripcion }}</td>
+                        <td>{{ incidencia.categoria }}</td>
+                        <td>{{ incidencia.prioridad }}</td>
+                        <td>{{ incidencia.estado }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sistema de Gestión de Incidencias</p>
+    </footer>
 </body>
 </html>
